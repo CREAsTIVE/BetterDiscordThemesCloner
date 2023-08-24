@@ -11,9 +11,8 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: debug
-              run: |
-                ls .
-                ls /home/runner/work/BetterDiscordThemesCloner/BetterDiscordThemesCloner
+              run: ls /home/runner/work/BetterDiscordThemesCloner/BetterDiscordThemesCloner
+                
         
 
             
