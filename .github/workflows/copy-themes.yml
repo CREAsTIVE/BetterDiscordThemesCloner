@@ -10,6 +10,8 @@ jobs:
     clone:
         runs-on: ubuntu-latest
         steps:
+            - name: cloning repo
+              run: git clone ${{ github.repositoryUrl }}
             - name: Runnig a python script
               run: python ./.github/workflows/copy.py
             - name: switching from HTTPS to SSH
