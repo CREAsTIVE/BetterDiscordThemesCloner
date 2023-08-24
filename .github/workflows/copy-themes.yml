@@ -13,7 +13,7 @@ jobs:
             - uses: wow-actions/update-file@v1
               with:
                 GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-                path: README.md
+                path: ./README.md
                 content: 'Updated by update-file action'
         
 
