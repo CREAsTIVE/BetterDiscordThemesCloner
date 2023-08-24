@@ -10,8 +10,15 @@ jobs:
     clone:
         runs-on: ubuntu-latest
         steps:
-            - name: debug
-              run: ls /home/runner/work/BetterDiscordThemesCloner/BetterDiscordThemesCloner
+            - name: creating a file
+              run: echo HELLO > test.txt
+            
+            - name: Update resources
+              uses: test-room-7/action-update-file@v1
+              with:
+                  file-path: test.txt
+                  commit-msg: Update resources
+                  github-token: ${{ secrets.GITHUB_TOKEN }}
                 
         
 
