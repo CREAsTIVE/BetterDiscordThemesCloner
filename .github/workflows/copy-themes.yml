@@ -10,9 +10,7 @@ jobs:
     clone:
         runs-on: ubuntu-latest
         steps:
-            - name: Cloning repository
-              run: |
-                git clone ${{github.repositoryUrl}}
+            - uses: actions/checkout@v1
             - name: debug
               run: |
                 tree -d
