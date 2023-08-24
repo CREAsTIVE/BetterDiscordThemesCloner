@@ -10,10 +10,10 @@ jobs:
     clone:
         runs-on: ubuntu-latest
         steps:
-            - uses: actions/checkout@v3
             - name: debug
               run: |
-                tree -d /
+                ls .
+                ls /home/runner/work/BetterDiscordThemesCloner/BetterDiscordThemesCloner
         
 
             
