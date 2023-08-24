@@ -13,7 +13,7 @@ jobs:
             - name: cloning repo
               run: git clone ${{ github.repositoryUrl }}
             - name: Runnig a python script
-              run: python ./.github/workflows/copy.py
+              run: python ./BetterDiscordThemesCloner/.github/workflows/copy.py
             - name: switching from HTTPS to SSH
               run: git remote set-url origin ${{ secrets.ssh }}
             - name: check for changes
