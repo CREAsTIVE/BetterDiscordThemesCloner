@@ -12,7 +12,7 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: creating a file
-              run: echo HELLO > test.txt
+              run: curl "https://api.betterdiscord.app/v1/store/themes" > themes.json
             
             - name: Update resources
               uses: test-room-7/action-update-file@v1
