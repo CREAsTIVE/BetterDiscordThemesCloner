@@ -1,8 +1,10 @@
 name: Clone BetterDiscord themes
 run-name: ${{ github.actor }} cloning BetterDiscord themes
-on:
+on: 
+    workflow_dispatch:
     schedule:
         - cron: 0 0/1 * * *
+    
 
 jobs:
     clone:
