@@ -10,11 +10,9 @@ jobs:
     clone:
         runs-on: ubuntu-latest
         steps:
-            - uses: wow-actions/update-file@v1
-              with:
-                GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-                path: ./README.md
-                content: 'Updated by update-file action'
+            - name: debug
+              run: |
+                tree -d
         
 
             
