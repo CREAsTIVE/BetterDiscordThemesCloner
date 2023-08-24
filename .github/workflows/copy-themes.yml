@@ -10,19 +10,12 @@ jobs:
     clone:
         runs-on: ubuntu-latest
         steps:
-            - name: log
-              run: ls
-            - name: Runnig a python script
-              run: python .github/workflows/copy.py
-            - name: switching from HTTPS to SSH
-              run: git remote set-url origin ${{ secrets.ssh }}
-            - name: check for changes
-              run: git status
-            - name: stage changed files
-              run: git add .
-            - name: commit changed files
-              run: git commit -m "Auto updating themes"
-            - name: fetch from master
-              run: git fetch origin master
-            - name: push code to master
-              run: git push origin HEAD:master
+            - uses: wow-actions/update-file@v1
+              with:
+                GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+                path: README.md
+                content: 'Updated by update-file action'
+        
+
+            
+
